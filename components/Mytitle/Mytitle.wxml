@@ -1,0 +1,10 @@
+<view class="my_title">
+<navigator class="logo">
+<image class="logo_image" style="width:140rpx;height:60rpx" src="../../icons/BILIBILI_LOGO.png"></image></navigator>
+<view class="search_icon">
+<image src="../../icons/搜索.png" style="width:60rpx;height:44rpx"></image></view>
+<view class="user_icon">
+<image src="../../icons/头像.png" style="width:54rpx;height:60rpx"></image></view>
+<view class="download">
+下载APP</view>
+</view>

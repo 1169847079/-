@@ -1,0 +1,52 @@
+<view class="main">
+<Mytitle></Mytitle>
+<view class="nav_warp">
+<scroll-view class="nav" scroll-x="true">
+<view bindtap="activeNav" data-index="{{index}}" class="nav_item {{index==currentindexnav?'active':''}}" wx:for="{{navList}}" wx:key="index">
+{{item.text}}
+</view></scroll-view>
+</view>
+<view class="slides">
+<swiper autoplay="true" indicator-dots="true">
+<swiper-item >
+<navigator>
+<image mode="widthFix" src="https://i0.hdslb.com/bfs/feed-admin/4e94e9304893802a5736c8e2339d1becd4fbfaea.png@1240w_440h.webp"></image>
+</navigator></swiper-item>
+<swiper-item >
+<navigator>
+<image mode="widthFix" src="https://i0.hdslb.com/bfs/feed-admin/14b35e0ac3f4691fa3120c24bd6b456663e11b79.jpg@880w_388h_1c_95q"></image>
+</navigator></swiper-item>
+<swiper-item >
+<navigator>
+<image mode="widthFix" src="https://i0.hdslb.com/bfs/sycp/creative_img/202105/b60bd62c8433fe7fd6f4a3a5cdec4b8a.jpg@880w_388h_1c_95q"></image>
+</navigator></swiper-item>
+<swiper-item >
+<navigator>
+<image mode="widthFix" src="https://i0.hdslb.com/bfs/feed-admin/fc70fbfed708ba72107d8b4601e4eaa22b6db83d.png@880w_388h_1c_95q"></image>
+</navigator></swiper-item>
+</swiper>
+
+
+
+<!-- 视频列表 -->
+<view class="video_warp">
+<navigator url="../detail/detail?id={{item.id}}" class="video_item" wx:for="{{videosList}}" wx:key="index">
+<view class="video_img">
+<image mode="widthFix" src="{{item.imgSrc}}"></image>
+<view class="video_info">
+<view class="play_count">
+<image style="width:30rpx;height:24rpx" src="../../icons/播放.png"></image>
+{{item.playCount}}
+</view>
+<view class="comment_count">
+<image style="width:30rpx;height:24rpx" src="../../icons/comment.png"></image>
+{{item.commentCount}}
+</view>
+</view>
+</view>
+<view class="video_title">{{item.desc}}</view>
+</navigator>
+</view>
+
+</view>
+</view>
